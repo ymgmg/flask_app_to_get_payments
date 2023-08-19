@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<form action="{{ url_for('user.login_process') }}" method="POST">
+					{{ form.hidden_tag() }}
+					<div class="mb-3">
+						{{ form.email.label }}
+						{{ form.email() }}
+					</div>
+					<div class="mb-3">
+						{{ form.password.label }}
+						{{ form.password() }}
+					</div>
+					<p>{{ form.submit() }}</p>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

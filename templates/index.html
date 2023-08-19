@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{% if not current_user.is_authenticated %}
+		<h1 style="color: olivedrab;">You can donate us anonymously or register/log in to see and count your donations</h1>
+	{% endif %}
+		{% include "pricing.html" %}
+{% endblock %}
